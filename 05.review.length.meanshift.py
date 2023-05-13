@@ -50,7 +50,7 @@ def shiftMode(data, pre, bandwidth):
     mode = numerator / denominator
     return mode
 
-mode = [[0 for j in range(n)] for i in range(n)]
+mode = [[] for i in range(n)]
 
 threshold = 1e-6
 bandwidth = 1
@@ -58,10 +58,10 @@ bandwidth = 1
 
 for i in range(n):
     m = 0
-    mode[i][m] = sampled_data[i]
+    mode.append(sampled_data[i])
     flag = True
     while flag == True:
-        mode[i][m+1] = shiftMode(sampled_data, mode[i][m], bandwidth)
+        mode.append(shiftMode(sampled_data, mode[i][m], bandwidth))
         m = m+1
         if euclidean_distance(mode[i][m], mode[i][m-1]) < threshold:
             flag = False
@@ -73,4 +73,3 @@ for i in range(n):
         clusters.append(tuple(mode[i][0]))
 
 print(clusters)
-
