@@ -41,10 +41,12 @@ The main code is stored in a notebook "DM_pj_oop.ipynb", I used the notebook her
 ## Result
 
 This is the result after using Meanshift clustering
+<br>
 <img src="Meanshift.png" alt="Meanshift">
 Howerver there are still some flaw in my implementation, the running time is very slow, for a resized image of size 50x33 the running time is approximately 1 minute, so for every images that are very big, I have to resize it first. Also the number of cluster is about 30% of the original number of unique color which is still really large number of clusters.
 
 Compare to Kmeans, Kmeans seem to have better performance since it process the image really fast and also be able to make some very small number of cluster. Below is the result of Kmeans:
+<br>
 <img src="Kmeans.png" alt="Kmeans">
 
 ## References
