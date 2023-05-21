@@ -47,13 +47,11 @@ This is the result after using Meanshift clustering with flat kernel:
 Howerver there are still some flaw in my implementation, the running time is very slow, for a resized image of size 50x33 the running time is approximately 1 minute, so for every images that are very big, I have to resize it first. Also the number of cluster is about 30% of the original number of unique color which is still really large number of clusters.
 
 When changing from flat kernel to gaussian kernel, the running time is about 16 times longer and also have larger number of clusters, but somehow, as presented in the image I think the result of gaussian kernel is better:
-
 **Mean Shift Clustering with Gaussian Kernel:**
 <img src="Meanshift-gauss.png" alt="Meanshift-gauss">
 <br>
 
 Compare to Kmeans, Kmeans seem to have better performance since it process the image really fast and also be able to make some very small number of cluster. Below is the result of Kmeans:
-
 **Kmeans Clustering**
 <img src="Kmeans.png" alt="Kmeans">
 <br>
